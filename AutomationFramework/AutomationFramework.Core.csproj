@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D4A6FCA4-22DB-49C3-AC67-6A2AC1632442}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AutomationFramework.Core</RootNamespace>
+    <AssemblyName>AutomationFramework.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\DataFieldAttribute.cs" />
+    <Compile Include="Attributes\Name.cs" />
+    <Compile Include="Attributes\VideoRecordingAttribute.cs" />
+    <Compile Include="Attributes\WebFormsNameAttribute.cs" />
+    <Compile Include="Configuration\Framework\Chrome\ChromeArgumentsSection.cs" />
+    <Compile Include="Configuration\Framework\FrameworkSettings.cs" />
+    <Compile Include="Configuration\GlobalSettings.cs" />
+    <Compile Include="Configuration\IConfiguration.cs" />
+    <Compile Include="Configuration\Jenkins\JenkinsSettings.cs" />
+    <Compile Include="Configuration\TestRail\TestRailSettings.cs" />
+    <Compile Include="Constants\DriverProcesses.cs" />
+    <Compile Include="Constants\HtmlElementXPath.cs" />
+    <Compile Include="Controls\AnchorElement.cs" />
+    <Compile Include="Controls\AsideElement.cs" />
+    <Compile Include="Controls\ButtonElement.cs" />
+    <Compile Include="Controls\ComboBoxElement.cs" />
+    <Compile Include="Controls\DevExpress\ASPxRichEditComponent.cs" />
+    <Compile Include="Controls\DevExpress\ASPxRteContextMenu.cs" />
+    <Compile Include="Controls\DevExpress\EditorCondition.cs" />
+    <Compile Include="Controls\DevExpress\IASPxRichEdit.cs" />
+    <Compile Include="Controls\Dialogs\JQueryDialog\JQueryConfirmationDialogElement.cs" />
+    <Compile Include="Controls\Dialogs\JQueryDialog\JQueryDialogElement.cs" />
+    <Compile Include="Controls\Dialogs\JQueryDialog\JQueryDialogFooter.cs" />
+    <Compile Include="Controls\Dialogs\NgDialog\NgConfirmationDialogElement.cs" />
+    <Compile Include="Controls\Dialogs\NgDialog\NgConfirmationDialogFooter.cs" />
+    <Compile Include="Controls\Dialogs\NgDialog\NgDialogBody.cs" />
+    <Compile Include="Controls\Dialogs\NgDialog\NgDialogElement.cs" />
+    <Compile Include="Controls\Dialogs\NgDialog\NgDialogFooter.cs" />
+    <Compile Include="Controls\Dialogs\NgDialog\NgDialogHeader.cs" />
+    <Compile Include="Controls\DivElement.cs" />
+    <Compile Include="Controls\DropdownElement.cs" />
+    <Compile Include="Controls\DropzoneElement.cs" />
+    <Compile Include="Controls\FooterElement.cs" />
+    <Compile Include="Controls\Grid\GridCellElement.cs" />
+    <Compile Include="Controls\Grid\GridColumns.cs" />
+    <Compile Include="Controls\Grid\GridElement.cs" />
+    <Compile Include="Controls\Grid\GridFooter.cs" />
+    <Compile Include="Controls\Grid\GridRowElement.cs" />
+    <Compile Include="Controls\Grid\GridTableHeaderElement.cs" />
+    <Compile Include="Controls\Grid\Pager\IPageNumbering.cs" />
+    <Compile Include="Controls\Grid\Pager\IPerPageSelector.cs" />
+    <Compile Include="Controls\Grid\Pager\IRangeOfTotalDisplay.cs" />
+    <Compile Include="Controls\ImageElement.cs" />
+    <Compile Include="Controls\InputCheckboxElement.cs" />
+    <Compile Include="Controls\InputRadioButtonElement.cs" />
+    <Compile Include="Controls\InputTextElement.cs" />
+    <Compile Include="Controls\Interfaces\IAnchor.cs" />
+    <Compile Include="Controls\Interfaces\IAside.cs" />
+    <Compile Include="Controls\Interfaces\IButton.cs" />
+    <Compile Include="Controls\Interfaces\ICheckbox.cs" />
+    <Compile Include="Controls\Interfaces\IClickable.cs" />
+    <Compile Include="Controls\Interfaces\IComboBox.cs" />
+    <Compile Include="Controls\Interfaces\IDialog.cs" />
+    <Compile Include="Controls\Interfaces\IDialogMessage.cs" />
+    <Compile Include="Controls\Interfaces\IDialogWithFooter.cs" />
+    <Compile Include="Controls\Interfaces\IDiv.cs" />
+    <Compile Include="Controls\Interfaces\IDropDown.cs" />
+    <Compile Include="Controls\Interfaces\IDropzone.cs" />
+    <Compile Include="Controls\Interfaces\IEnabled.cs" />
+    <Compile Include="Controls\Interfaces\IFooter.cs" />
+    <Compile Include="Controls\Interfaces\IGrid.cs" />
+    <Compile Include="Controls\Interfaces\IGridCell.cs" />
+    <Compile Include="Controls\Interfaces\IGridRow.cs" />
+    <Compile Include="Controls\Interfaces\IGridTableHeader.cs" />
+    <Compile Include="Controls\Interfaces\IHtmlElement.cs" />
+    <Compile Include="Controls\Interfaces\IImage.cs" />
+    <Compile Include="Controls\Interfaces\IKendoCombobox.cs" />
+    <Compile Include="Controls\Interfaces\IKendoGrid.cs" />
+    <Compile Include="Controls\Interfaces\IKendoSelect.cs" />
+    <Compile Include="Controls\Interfaces\ILabel.cs" />
+    <Compile Include="Controls\Interfaces\IMain.cs" />
+    <Compile Include="Controls\Interfaces\IRadioButton.cs" />
+    <Compile Include="Controls\Interfaces\ISpan.cs" />
+    <Compile Include="Controls\Interfaces\ITextBox.cs" />
+    <Compile Include="Controls\Interfaces\ITextContent.cs" />
+    <Compile Include="Controls\Interfaces\ITitle.cs" />
+    <Compile Include="Controls\Interfaces\IUnorderedList.cs" />
+    <Compile Include="Controls\Interfaces\IVisible.cs" />
+    <Compile Include="Controls\jQueryDatePicker\ButtonPane.cs" />
+    <Compile Include="Controls\jQueryDatePicker\CalendarGrid.cs" />
+    <Compile Include="Controls\jQueryDatePicker\DatePickerHeader.cs" />
+    <Compile Include="Controls\jQueryDatePicker\JQueryDatePickerElement.cs" />
+    <Compile Include="Controls\Kendo\Grid\KendoGrid.cs" />
+    <Compile Include="Controls\Kendo\Grid\KendoGridColumn.cs" />
+    <Compile Include="Controls\Kendo\Grid\KendoGridFooter.cs" />
+    <Compile Include="Controls\Kendo\Grid\KendoGridHeader.cs" />
+    <Compile Include="Controls\Kendo\Grid\KendoGridRow.cs" />
+    <Compile Include="Controls\Kendo\KendoNumericTextBoxElement.cs" />
+    <Compile Include="Controls\Kendo\KendoSelect.cs" />
+    <Compile Include="Controls\Kendo\KendoUiButtonElement.cs" />
+    <Compile Include="Controls\Kendo\KendoUiComboboxElement.cs" />
+    <Compile Include="Controls\Kendo\KendoUiDropdownElement.cs" />
+    <Compile Include="Controls\LabelElement.cs" />
+    <Compile Include="Controls\ListItemElement.cs" />
+    <Compile Include="Controls\MainElement.cs" />
+    <Compile Include="Controls\Pages\BasePage.cs" />
+    <Compile Include="Controls\Pages\IPage.cs" />
+    <Compile Include="Controls\SectionElement.cs" />
+    <Compile Include="Controls\SpanElement.cs" />
+    <Compile Include="Controls\UiElement.cs" />
+    <Compile Include="Controls\UnorderedListElement.cs" />
+    <Compile Include="Engine\Browser.CookieService.cs" />
+    <Compile Include="Engine\Browser.Driver.cs" />
+    <Compile Include="Engine\Browser.ElementSearchService.cs" />
+    <Compile Include="Engine\Browser.JavaScriptExecutor.cs" />
+    <Compile Include="Engine\Browser.Profile.cs" />
+    <Compile Include="Engine\By.cs" />
+    <Compile Include="Engine\ElementSearchService.cs" />
+    <Compile Include="Engine\EventFiringBrowser.cs" />
+    <Compile Include="Engine\IElementFinder.cs" />
+    <Compile Include="Enums\ActionType.cs" />
+    <Compile Include="Enums\BrowserType.cs" />
+    <Compile Include="Enums\ColorCode.cs" />
+    <Compile Include="Enums\ElementState.cs" />
+    <Compile Include="Enums\ExcelOperation.cs" />
+    <Compile Include="Enums\FileType.cs" />
+    <Compile Include="Enums\FontWeight.cs" />
+    <Compile Include="Enums\GridSortOrder.cs" />
+    <Compile Include="Enums\HttpMethod.cs" />
+    <Compile Include="Enums\JQueryDatePickerMonth.cs" />
+    <Compile Include="Enums\MouseClickType.cs" />
+    <Compile Include="Enums\MySqlRequestType.cs" />
+    <Compile Include="Enums\ScrollBarType.cs" />
+    <Compile Include="Enums\SearchType.cs" />
+    <Compile Include="Enums\SelectionState.cs" />
+    <Compile Include="Enums\SetTextType.cs" />
+    <Compile Include="Enums\SqlJoinType.cs" />
+    <Compile Include="Extensions\ByExtensions.cs" />
+    <Compile Include="Extensions\DataTableExtensions.cs" />
+    <Compile Include="Extensions\ElementExtensions.cs" />
+    <Compile Include="Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Extensions\EnumExtensions.cs" />
+    <Compile Include="Extensions\ILogExtentions.cs" />
+    <Compile Include="Extensions\ObjectExtensions.cs" />
+    <Compile Include="Extensions\RegexConvertUtils.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Factories\KendoGridColumnFactory.cs" />
+    <Compile Include="Factories\KendoGridRowFactory.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.6.1.AssemblyAttributes.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\AttributeHelper.cs" />
+    <Compile Include="Utils\CsvHandler.cs" />
+    <Compile Include="Utils\DateUtils.cs" />
+    <Compile Include="Utils\EmailFetcher.cs" />
+    <Compile Include="Utils\ExcelHelper\ExcelHelper.cs" />
+    <Compile Include="Utils\FileHandler.cs" />
+    <Compile Include="Utils\HtmlStyleHelper.cs" />
+    <Compile Include="Utils\Jenkins\Jenkins.cs" />
+    <Compile Include="Utils\Jenkins\JenkinsApiClient.cs" />
+    <Compile Include="Utils\Jenkins\Models\BuildParameters\BuildParameters.cs" />
+    <Compile Include="Utils\JsonHelper.cs" />
+    <Compile Include="Utils\Localization\LocalizedDescriptionAttribute.cs" />
+    <Compile Include="Utils\Log\ILogger.cs" />
+    <Compile Include="Utils\Log\Log4NetLogger.cs" />
+    <Compile Include="Utils\MySqlDataReaderMapping.cs" />
+    <Compile Include="Utils\NetworkHelper.cs" />
+    <Compile Include="Utils\Performance\PerformanceHelper.cs" />
+    <Compile Include="Utils\ProcessManager.cs" />
+    <Compile Include="Utils\RandomUtils\Address.cs" />
+    <Compile Include="Utils\RandomUtils\Company.cs" />
+    <Compile Include="Utils\RandomUtils\Finance.cs" />
+    <Compile Include="Utils\RandomUtils\Internet.cs" />
+    <Compile Include="Utils\RandomUtils\Lorem.cs" />
+    <Compile Include="Utils\RandomUtils\Numbers.cs" />
+    <Compile Include="Utils\RandomUtils\Person.cs" />
+    <Compile Include="Utils\RandomUtils\RandomData.cs" />
+    <Compile Include="Utils\RandomUtils\User.cs" />
+    <Compile Include="Utils\ResourceHelper.cs" />
+    <Compile Include="Utils\REST\HttpDataFormat.cs" />
+    <Compile Include="Utils\REST\RestClient.cs" />
+    <Compile Include="Utils\REST\RestRequest.cs" />
+    <Compile Include="Utils\REST\RestResponse.cs" />
+    <Compile Include="Utils\TestautoServer\Models\RequestParameters\RequestParamater.cs" />
+    <Compile Include="Utils\TestautoServer\Models\Sql\SqlCommandBuilder.cs" />
+    <Compile Include="Utils\TestautoServer\Models\Sql\SqlJoin.cs" />
+    <Compile Include="Utils\TestautoServer\TestautoServerDatabase.cs" />
+    <Compile Include="Utils\TestautoServer\TestautoServerRequest.cs" />
+    <Compile Include="Utils\TestData\TestDataHelper.cs" />
+    <Compile Include="Utils\TestRail\Endpoints\Case.cs" />
+    <Compile Include="Utils\TestRail\Endpoints\CaseFields.cs" />
+    <Compile Include="Utils\TestRail\Endpoints\CaseTypes.cs" />
+    <Compile Include="Utils\TestRail\Endpoints\Results.cs" />
+    <Compile Include="Utils\TestRail\Endpoints\Statuses.cs" />
+    <Compile Include="Utils\TestRail\Endpoints\Tests.cs" />
+    <Compile Include="Utils\TestRail\Models\AddResult\AddResultRequest.cs" />
+    <Compile Include="Utils\TestRail\Models\AddResult\AddResultresponse.cs" />
+    <Compile Include="Utils\TestRail\Models\GetCaseFields\Config.cs" />
+    <Compile Include="Utils\TestRail\Models\GetCaseFields\Context.cs" />
+    <Compile Include="Utils\TestRail\Models\GetCaseFields\GetCaseFieldsResponse.cs" />
+    <Compile Include="Utils\TestRail\Models\GetCaseFields\Options.cs" />
+    <Compile Include="Utils\TestRail\Models\GetCaseTypes\GetCaseTypesResponse.cs" />
+    <Compile Include="Utils\TestRail\Models\GetCase\GetCaseResponse.cs" />
+    <Compile Include="Utils\TestRail\Models\GetStatus\GetStatusResponse.cs" />
+    <Compile Include="Utils\TestRail\Models\GetTests\CustomStepsSeparated.cs" />
+    <Compile Include="Utils\TestRail\Models\GetTests\GetTestsResponse.cs" />
+    <Compile Include="Utils\TestRail\TestCaseStatus.cs" />
+    <Compile Include="Utils\TestRail\TestCaseType.cs" />
+    <Compile Include="Utils\TestRail\TestRail.cs" />
+    <Compile Include="Utils\TestRail\TestRailTestStatus.cs" />
+    <Compile Include="Utils\VideoRecorder\FFmpegVideoRecorder.cs" />
+    <Compile Include="Utils\VideoRecorder\IVideoRecorder.cs" />
+    <Compile Include="Utils\VideoRecorder\VideoRecorderService.cs" />
+    <Compile Include="Utils\VideoRecorder\VideoRecordingMode.cs" />
+    <Compile Include="Utils\Wait.cs" />
+    <Compile Include="Utils\XmlHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Bogus">
+      <Version>33.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="CsvHelper">
+      <Version>12.1.2</Version>
+    </PackageReference>
+    <PackageReference Include="DotNetSeleniumExtras.WaitHelpers">
+      <Version>3.11.0</Version>
+    </PackageReference>
+    <PackageReference Include="ExcelDataReader">
+      <Version>3.6.0</Version>
+    </PackageReference>
+    <PackageReference Include="ExcelDataReader.DataSet">
+      <Version>3.6.0</Version>
+    </PackageReference>
+    <PackageReference Include="gurock.testrail">
+      <Version>1.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="HtmlAgilityPack">
+      <Version>1.11.38</Version>
+    </PackageReference>
+    <PackageReference Include="iTextSharp">
+      <Version>5.5.13.2</Version>
+    </PackageReference>
+    <PackageReference Include="log4net">
+      <Version>2.0.13</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Exchange.WebServices">
+      <Version>2.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="MySql.Data">
+      <Version>8.0.27</Version>
+    </PackageReference>
+    <PackageReference Include="Polly">
+      <Version>7.2.2</Version>
+    </PackageReference>
+    <PackageReference Include="RestSharp">
+      <Version>106.13.0</Version>
+    </PackageReference>
+    <PackageReference Include="Selenium.Support">
+      <Version>4.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Selenium.WebDriver">
+      <Version>4.0.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="JS\AngularWaits\AngularTestabilityResult.js" />
+    <Content Include="JS\AngularWaits\DeclareAngularTestability.js" />
+    <Content Include="JS\AngularWaits\WaitForAngularTestability.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\AutomationFramework.Core.csproj.nuget.dgspec.json" />
+    <None Include="obj\AutomationFramework.Core.csproj.nuget.g.props" />
+    <None Include="obj\AutomationFramework.Core.csproj.nuget.g.targets" />
+    <None Include="obj\Debug\AutomationFramework.Core.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\AutomationFramework.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\project.assets.json" />
+    <None Include="obj\project.nuget.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,1 @@
+﻿return window.angularIsTestable == true
